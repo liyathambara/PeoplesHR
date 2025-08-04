@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="images/logo.png">
+    <title>PeoplesHR</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <span class="logo-top"><img src="images/logo_name.png" alt="PeoplesHR Logo"></span>
+            </div>
+
+            <div class="menu-container">
+                <div class="menu-wrapper">
+                    <div class="menu-section-top">
+                        <div class="menu-title">Main Menu</div>
+                        <a href="#" class="menu-item"><span><img src="images/Dashboard.svg"
+                                    alt="Dashboard">Dashboard</span></a>
+                        <a href="#" class="menu-item"><span> <img src="images/Employee.svg" alt="Employee">Employee</span></a>
+                        <a href="#" class="menu-item"><span> <img src="images/leaveM.svg" alt="Leave Management">Leave
+                                Management</span></a>
+                        <a href="#" class="menu-item active"><span> <img src="images/Billing.svg" alt="Billing">Billing</span></a>
+                        <a href="#" class="menu-item"><span> <img src="images/Setting.svg" alt="Setting">Setting</span></a>
+                    </div>
+
+                    <div class="menu-section-bottom">
+                        <div class="menu-title">Support</div>
+                        <a href="#" class="menu-item" ><span><img src="images/refund.svg" alt="Refund Policy">Refund Policy</span></a>
+                        <a href="#" class="menu-item" ><span><img src="images/terms.svg" alt="Terms of Service">Terms of Service</span></a>
+                        <a href="#" class="menu-item"><span><img src="images/help.svg" alt="Need Help?">Need Help</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="hamburger" onclick="toggleSidebar()">☰</div>
+                <div class="user-info">
+                    <div class="notification"><img src="images/notification-icon.svg" alt="Notifications"></div>
+                    <div class="user-profile">
+                        <div class="user-text">
+                            <div class="user-greeting">Hello</div>
+                            <div class="user-company">Applo Privet LTD</div>
+                        </div>
+                        <div class="user-avatar"> <img src="images/profile.svg" alt="User Avatar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="content">
+                <div class="page-header">
+                    <h1 class="page-title">Package plan</h1>
+                    <div class="breadcrumb">Dashboard / Billing /Package plan</div>
+                </div>
+
+                <!-- Package Table -->
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Package Name</th>
+                                <th>Last payment</th>
+                                <th>Next payment</th>
+                                <th>Billing Cycle</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Expire in</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ABC - Standard</td>
+                                <td>Aug 21, 2021</td>
+                                <td>Aug 21, 2022</td>
+                                <td>Yearly</td>
+                                <td class="amount">$3500</td>
+                                <td><span class="status-active">Active</span></td>
+                                <td>365 days <span class="expand-icon" onclick="toggleRow(0)"><img src="images/arrow-icon.svg" alt="Expand"></span></td>
+                            </tr>
+                            <tr class="expanded-row" id="expanded-0">
+                                <td colspan="7">
+                                    <div class="expanded-content">
+                                        <!-- Microsoft Section Content -->
+                                        <div class="microsoft-header">
+                                            <div class="microsoft-logo">
+                                                <div class="ms-logo"></div>
+                                                Microsoft
+                                            </div>
+                                            <div class="trash-icon"></div>
+                                        </div>
+
+                                        <div class="plans-container">
+                                            <div class="plan-card selected">
+                                                <div class="plan-radio checked" onclick="selectPlan(this, 1, 0)"></div>
+                                                <div class="plan-title">ADDIC - Most Popular Plan / 1y</div>
+                                                <div class="plan-subtitle">(Free Plan - No Subscription Required)</div>
+                                                <div class="plan-description">
+                                                    Perfect for small teams and startups getting started with HR
+                                                    management
+                                                </div>
+                                                <ul class="plan-features">
+                                                    <li>Basic team management features</li>
+                                                    <li>Essential HR tools</li>
+                                                    <li>Free forever plan</li>
+                                                </ul>
+                                                <a href="#" class="learn-more">learn more</a>
+                                            </div>
+
+                                            <div class="plan-card">
+                                                <div class="membership-badge">Free Plan</div>
+                                                <div class="plan-radio" onclick="selectPlan(this, 1, 1)"></div>
+                                                <div class="plan-title">Basic HR Plan / 1y</div>
+                                                <div class="plan-subtitle">(Free Plan with Limited Features)</div>
+
+                                                <div class="plan-details">
+                                                    <div class="detail-group">
+                                                        <div class="detail-label">Status</div>
+                                                        <div class="detail-value">Active</div>
+                                                    </div>
+                                                    <div class="detail-group">
+                                                        <div class="detail-label">Billing Cycle</div>
+                                                        <div class="detail-value">Yearly</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="plan-details">
+                                                    <div class="detail-group">
+                                                        <div class="detail-label">Last Invoice</div>
+                                                        <div class="detail-value">Oct 20, 2020</div>
+                                                    </div>
+                                                    <div class="detail-group">
+                                                        <div class="detail-label">Next payment</div>
+                                                        <div class="detail-value">Oct 20, 2021</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="action-buttons">
+                                            <button class="btn btn-secondary">Upgrade Plan</button>
+                                            <button class="btn btn-secondary">View Features</button>
+                                        </div>
+
+                                        <!-- Amount Due Panel -->
+                                        <div class="sidebar-panel">
+                                            <div class="panel-header">Amount Due</div>
+                                            <div class="amount-due">Free</div>
+
+                                            <div class="discount-section">
+                                                <div class="discount-label">Upgrade for Premium Features</div>
+                                                <input type="text" class="coupon-input"
+                                                    placeholder="Enter upgrade code">
+                                            </div>
+
+                                            <div class="total-section">
+                                                <div class="total-row">
+                                                    <span class="total-label">Total payment</span>
+                                                    <span class="total-amount">$ 0.00</span>
+                                                </div>
+                                            </div>
+
+                                            <button class="btn-primary">Upgrade Now</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ADDIC - Most Popular</td>
+                                <td>Oct 20, 2020</td>
+                                <td>Oct 20, 2021</td>
+                                <td>Yearly</td>
+                                <td class="amount">Free</td>
+                                <td><span class="status-active">Active</span></td>
+                                <td>28 days <span class="expand-icon" onclick="toggleRow(1)"><img src="images/arrow-icon.svg" alt="Expand"></span></td>
+                            </tr>
+                            <tr class="expanded-row" id="expanded-1">
+                                <td colspan="7">
+                                    <div class="expanded-content">
+                                        <!-- Microsoft Section Content -->
+                                        <div class="microsoft-header">
+                                            <div class="microsoft-logo">
+                                                <div class="ms-logo"></div>
+                                            </div>
+                                            <div class="trash-icon"></div>
+                                        </div>
+
+                                        <div class="plans-container">
+                                            <div class="plan-card selected">
+                                        
+                                                    <div class="plan-radio checked" onclick="selectPlan(this, 0, 0)">
+                                                    </div>
+                                                    <div class="plan-title">Popular Business Plan / 3m</div>
+                                                    <div class="plan-subtitle">(Minimum Subscription : 1200 INR )</div>
+
+                                                
+                                                <div class="plan-description">
+                                                    Ideal for growing teams managing large-scale HR operations
+                                                </div>
+                                                <ul class="plan-features">
+                                                    <li>5 team member ( $ 12/ 3 month each)</li>
+                                                    <li>Access to basic HR reports and analytics</li>
+                                                    <li>Leave and attendance tracking</li>
+                                                </ul>
+                                                <a href="#" class="learn-more">learn more</a>
+                                            </div>
+
+                                            <div class="plan-card">
+                                                <div class="membership-badge ">Membership Plan</div>
+                                                <div class="plan-radio" onclick="selectPlan(this, 0, 1)"></div>
+                                                <div class="plan-title">Turbo Business Plan / 3m</div>
+                                                <div class="plan-subtitle">(Minimum Subscription : 1200 INR )</div>
+
+                                                <div class="plan-details">
+                                                    <div class="detail-group">
+                                                        <div class="detail-label">Status</div>
+                                                        <div class="detail-value">Active</div>
+                                                    </div>
+                                                    <div class="detail-group">
+                                                        <div class="detail-label">Billing Cycle</div>
+                                                        <div class="detail-value">Yearly</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="plan-details">
+                                                    <div class="detail-group">
+                                                        <div class="detail-label">Last Invoice</div>
+                                                        <div class="detail-value">Oct 20, 2021</div>
+                                                    </div>
+                                                    <div class="detail-group">
+                                                        <div class="detail-label">Next payment</div>
+                                                        <div class="detail-value">Oct 20, 2023</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="action-buttons">
+                                            <button class="btn btn-secondary">Unsubscribe</button>
+                                            <button class="btn btn-secondary">Change Package</button>
+                                        </div>
+
+                                        <!-- Amount Due Panel -->
+                                        <div class="sidebar-panel">
+                                            <div class="panel-header">Amount Due</div>
+                                            <div class="amount-due">$ 300.00</div>
+
+                                            <div class="discount-section">
+                                                <div class="discount-label">10% Discount per Coupon</div>
+                                                <input type="text" class="coupon-input"
+                                                    placeholder="Enter your coupon ID">
+                                            </div>
+
+                                            <div class="total-section">
+                                                <div class="total-row">
+                                                    <span class="total-label">Total payment</span>
+                                                    <span class="total-amount">$ 250.00</span>
+                                                </div>
+                                            </div>
+
+                                            <button class="btn-primary">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+
+        
+            if (window.innerWidth <= 768) {
+               
+                if (sidebar.style.display === 'none' || sidebar.style.display === '') {
+                    sidebar.style.display = 'block';
+                    sidebar.style.position = 'fixed';
+                    sidebar.style.top = '0';
+                    sidebar.style.left = '0';
+                    sidebar.style.height = '100vh';
+                    sidebar.style.zIndex = '1000';
+                    sidebar.style.width = '70px'; 
+                    sidebar.classList.add('collapsed'); 
+
+                    
+                    const overlay = document.createElement('div');
+                    overlay.className = 'mobile-overlay';
+                    overlay.style.cssText = `
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0,0,0,0.5);
+                        z-index: 999;
+                    `;
+                    overlay.onclick = () => closeMobileSidebar();
+                    document.body.appendChild(overlay);
+                } else {
+                    closeMobileSidebar();
+                }
+            } else {
+                
+                sidebar.classList.toggle('collapsed');
+            }
+        }
+
+        function closeMobileSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.mobile-overlay');
+
+            sidebar.style.display = 'none';
+            sidebar.classList.remove('collapsed'); 
+            if (overlay) {
+                overlay.remove();
+            }
+        }
+
+       
+        window.addEventListener('resize', function () {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.mobile-overlay');
+
+            if (window.innerWidth > 768) {
+              
+                sidebar.style.display = '';
+                sidebar.style.position = '';
+                sidebar.style.top = '';
+                sidebar.style.left = '';
+                sidebar.style.height = '';
+                sidebar.style.zIndex = '';
+                sidebar.style.width = '';
+
+                if (overlay) {
+                    overlay.remove();
+                }
+            } else {
+                
+                sidebar.style.display = 'none';
+                sidebar.classList.remove('collapsed');
+                if (overlay) {
+                    overlay.remove();
+                }
+            }
+        });
+
+        function toggleRow(index) {
+            const expandedRow = document.getElementById(`expanded-${index}`);
+            const icon = document.querySelectorAll('.expand-icon')[index];
+
+            if (expandedRow.classList.contains('show')) {
+                expandedRow.classList.remove('show');
+                icon.classList.remove('expanded');
+            } else {
+             
+                document.querySelectorAll('.expanded-row').forEach(row => {
+                    row.classList.remove('show');
+                });
+                document.querySelectorAll('.expand-icon').forEach(ic => {
+                    ic.classList.remove('expanded');
+                });
+
+              
+                expandedRow.classList.add('show');
+                icon.classList.add('expanded');
+            }
+        }
+
+        function selectPlan(clickedRadio, rowIndex, planIndex) {
+           
+            const expandedRow = document.getElementById(`expanded-${rowIndex}`);
+
+          
+            const allRadios = expandedRow.querySelectorAll('.plan-radio');
+            const allPlanCards = expandedRow.querySelectorAll('.plan-card');
+
+           
+            allRadios.forEach(radio => {
+                radio.classList.remove('checked');
+            });
+            allPlanCards.forEach(card => {
+                card.classList.remove('selected');
+            });
+
+        
+            clickedRadio.classList.add('checked');
+
+            
+            const parentCard = clickedRadio.closest('.plan-card');
+            if (parentCard) {
+                parentCard.classList.add('selected');
+            }
+
+            console.log(`Selected plan ${planIndex} in row ${rowIndex}`);
+        }
+    </script>
+</body>
+
+</html>
